@@ -16,7 +16,9 @@ const { verifyWebhookSignature, generateWebhookSignature } = require("graphcms-u
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
 const body = {}; // Typically req.body
-const signature = generateWebhookSignature({ body, secret });
+const signature = "..."; // Typically req.headers['gcms-signature']
+
+const isValid = verifyWebhookSignature({ body, signature, secret });
 const isValid = verifyWebhookSignature({ body, secret, signature });
 ```
 
