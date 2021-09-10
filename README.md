@@ -19,7 +19,6 @@ const body = {}; // Typically req.body
 const signature = "..."; // Typically req.headers['gcms-signature']
 
 const isValid = verifyWebhookSignature({ body, signature, secret });
-const isValid = verifyWebhookSignature({ body, secret, signature });
 ```
 
 ### `generateWebhookSignature`
