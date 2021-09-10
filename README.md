@@ -11,7 +11,7 @@ npm i graphcms-utils
 ### `verifyWebhookSignature`
 
 ```js
-const { verifyWebhookSignature, generateWebhookSignature } = require("graphcms-utils");
+const { verifyWebhookSignature } = require("graphcms-utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
