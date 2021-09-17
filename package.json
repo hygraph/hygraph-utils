@@ -1,6 +1,6 @@
 {
   "name": "@graphcms/utils",
-  "version": "1.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Collection of useful GraphCMS utilities for building GraphQL powered apps.",
   "main": "index.js",
   "keywords": [],
