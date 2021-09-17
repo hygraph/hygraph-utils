@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm i graphcms-utils
+npm i @graphcms/utils
 ```
 
 ## Usage
