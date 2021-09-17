@@ -11,7 +11,7 @@ npm i @graphcms/utils
 ### `verifyWebhookSignature`
 
 ```js
-const { verifyWebhookSignature } = require("graphcms-utils");
+const { verifyWebhookSignature } = require("@graphcms/utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
@@ -26,7 +26,7 @@ const isValid = verifyWebhookSignature({ body, signature, secret });
 This is useful for testing signed webhooks. You can generate a GraphCMS webhook signature, and then use it to test your webhook.
 
 ```js
-const { generateWebhookSignature } = require("graphcms-utils");
+const { generateWebhookSignature } = require("@graphcms/utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
