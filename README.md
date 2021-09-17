@@ -21,6 +21,8 @@ const signature = "..."; // Typically req.headers['gcms-signature']
 const isValid = verifyWebhookSignature({ body, signature, secret });
 ```
 
+[Learn more about webhooks](https://graphcms.com/docs/api-reference/basics/webhooks)
+
 ### `generateWebhookSignature`
 
 This is useful for testing signed webhooks. You can generate a GraphCMS webhook signature, and then use it to test your webhook.
@@ -36,3 +38,5 @@ const body = {
 
 const signature = generateWebhookSignature({ body, secret });
 ```
+
+[Learn more about webhooks](https://graphcms.com/docs/api-reference/basics/webhooks)
