@@ -21,6 +21,20 @@ const signature = "..."; // Typically req.headers['gcms-signature']
 const isValid = verifyWebhookSignature({ body, signature, secret });
 ```
 
+`verifyWebhookSignature` also accepts a `rawPayload` in the case that the body
+has not yet been parsed.
+
+```js
+const { verifyWebhookSignature } = require("@graphcms/utils");
+
+const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
+
+const rawPayload = '{"hello":"world"}';
+const signature = "..."; // Typically req.headers['gcms-signature']
+
+const isValid = verifyWebhookSignature({ rawPayload, signature, secret });
+```
+
 [Learn more about webhooks](https://graphcms.com/docs/api-reference/basics/webhooks)
 
 ### `generateWebhookSignature`
