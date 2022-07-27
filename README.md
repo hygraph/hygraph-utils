@@ -1,4 +1,4 @@
-# graphcms-utils
+# Hygraph Utils
 
 ## Install
 
@@ -35,11 +35,11 @@ const signature = "..."; // Typically req.headers['gcms-signature']
 const isValid = verifyWebhookSignature({ rawPayload, signature, secret });
 ```
 
-[Learn more about webhooks](https://graphcms.com/docs/api-reference/basics/webhooks)
+[Learn more about webhooks](https://hygraph.com/docs/api-reference/basics/webhooks)
 
 ### `generateWebhookSignature`
 
-This is useful for testing signed webhooks. You can generate a GraphCMS webhook signature, and then use it to test your webhook.
+This is useful for testing signed webhooks. You can generate a Hygraph webhook signature, and then use it to test your webhook.
 
 ```js
 const { generateWebhookSignature } = require("@graphcms/utils");
@@ -53,4 +53,4 @@ const body = {
 const signature = generateWebhookSignature({ body, secret });
 ```
 
-[Learn more about webhooks](https://graphcms.com/docs/api-reference/basics/webhooks)
+[Learn more about webhooks](https://hygraph.com/docs/api-reference/basics/webhooks)

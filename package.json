@@ -1,7 +1,7 @@
 {
   "name": "@graphcms/utils",
   "version": "0.0.0-semantic-release",
-  "description": "Collection of useful GraphCMS utilities for building GraphQL powered apps.",
+  "description": "Collection of useful Hygraph utilities for building GraphQL powered apps.",
   "main": "index.js",
   "keywords": [],
   "author": "Jamie Barton",
