@@ -1,5 +1,20 @@
 const { createHmac } = require("crypto");
 
+escapeHTMLChars = (str) => {
+  return str.split("").map(s => {
+    switch (s) {
+      case '&':
+        return '\\\\u0026'
+      case '<':
+        return '\\\\u003c'
+      case '>':
+        return '\\\\u003e'
+      default:
+        return s
+    }
+  }).join("");
+}
+
 exports.verifyWebhookSignature = ({ body, signature, secret, rawPayload }) => {
   const [rawSign, rawEnv, rawTimestamp] = signature.split(", ");
 
@@ -12,6 +27,8 @@ exports.verifyWebhookSignature = ({ body, signature, secret, rawPayload }) => {
     EnvironmentName,
     TimeStamp: Timestamp,
   });
+
+  payload = escapeHTMLChars(payload);
 
   const hash = createHmac("sha256", secret).update(payload).digest("base64");
 
@@ -26,11 +43,13 @@ exports.generateWebhookSignature = ({
 }) => {
   const TimeStamp = Date.now();
 
-  const payload = JSON.stringify({
+  let payload = JSON.stringify({
     Body: rawPayload || JSON.stringify(body),
     EnvironmentName: environmentName,
     TimeStamp,
   });
+
+  payload = escapeHTMLChars(payload)
 
   const hash = createHmac("sha256", secret).update(payload).digest("base64");
 
