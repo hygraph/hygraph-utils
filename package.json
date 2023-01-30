@@ -1,5 +1,5 @@
 {
-  "name": "@graphcms/utils",
+  "name": "@hygraph/utils",
   "version": "0.0.0-semantic-release",
   "description": "Collection of useful Hygraph utilities for building GraphQL powered apps.",
   "main": "index.js",
