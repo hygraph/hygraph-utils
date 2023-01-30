@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm i @graphcms/utils
+npm i @hygraph/utils
 ```
 
 ## Usage
@@ -11,7 +11,7 @@ npm i @graphcms/utils
 ### `verifyWebhookSignature`
 
 ```js
-const { verifyWebhookSignature } = require("@graphcms/utils");
+const { verifyWebhookSignature } = require("@hygraph/utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
@@ -25,7 +25,7 @@ const isValid = verifyWebhookSignature({ body, signature, secret });
 has not yet been parsed.
 
 ```js
-const { verifyWebhookSignature } = require("@graphcms/utils");
+const { verifyWebhookSignature } = require("@hygraph/utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
@@ -42,7 +42,7 @@ const isValid = verifyWebhookSignature({ rawPayload, signature, secret });
 This is useful for testing signed webhooks. You can generate a Hygraph webhook signature, and then use it to test your webhook.
 
 ```js
-const { generateWebhookSignature } = require("@graphcms/utils");
+const { generateWebhookSignature } = require("@hygraph/utils");
 
 const secret = "rCNwyiloY3oJYYkxgpBXaleIiUv5MYlx";
 
